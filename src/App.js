@@ -1,4 +1,5 @@
 import React from 'react';
+import AppWithHooks from './AppWithHooks'
 
 import './App.css';
 
@@ -26,14 +27,16 @@ componentDidMount(){
 render(){
   return (
     <div className="App">
-      <header className="App-header">
+      
        
         <p>
           This is App.js
         </p>
     
-      </header>
+     
+      <AppWithHooks />
     </div>
+
 );
 }
 }
