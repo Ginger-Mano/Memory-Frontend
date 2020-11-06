@@ -1,5 +1,6 @@
 import React, { useState, useEffect }from 'react';
 import CardContainer from './CardContainer'
+import NavBar from './Navbar'
 
 import './App.css';
 
@@ -28,6 +29,7 @@ let mappedCards = cards.map((card) => {
             <p>
               This is App with Hooks
             </p>
+            <NavBar />
             {mappedCards} 
         
         </div>
