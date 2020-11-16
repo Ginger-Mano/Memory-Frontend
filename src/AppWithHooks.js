@@ -21,7 +21,7 @@ useEffect(() => {
 },[])
 
 let mappedCards = cards.map((card) => {
-    return <CardContainer card={card} isFlipped={isFlipped} key={card.id} />
+    return <CardContainer card={card} isFlipped={isFlipped} setIsFlipped={setIsFlipped} key={card.id} />
 })
     return (
         <div className="App">
