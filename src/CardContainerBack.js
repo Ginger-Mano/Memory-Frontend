@@ -3,26 +3,25 @@ import ReactCardFlip from 'react-card-flip';
 
 
 
-const CardContainer = (props) => {
+const CardContainerBack = (props) => {
     const  [isFlipped, setIsFlipped] = useState(true)
 
     console.log(props, "Props")
 
  const handleClick = (evt) => {
         console.log(evt);
-    setIsFlipped({
-        isFlipped: true
-    })
+    setIsFlipped(!isFlipped)
     }
     return(
         <div className="cardgrid" >
-       
-            <div onClick={handleClick} className="cardDiv">
-            <p>{props.card.term_name}</p>
-            {/* <p>{props.card.definition}</p> */}
+       {/* <ReactCardFlip> */}
+            <div isFlipped={props.isFlipped}onClick={handleClick} className="cardDiv">
+            {/* <p>{props.card.term_name}</p> */}
+            <p>{props.definition}</p>
             {/* <img className="backimg" src={props.card.image} alt="image"/> */}
-           <img src={props.card.image_front} alt="image front"/>
+           <img src={props.image_front} alt="image front"/>
            </div>
+           {/* </ReactCardFlip> */}
           
         </div>
     )
@@ -30,4 +29,4 @@ const CardContainer = (props) => {
     
 }
 
-export default CardContainer 
+export default CardContainerBack 

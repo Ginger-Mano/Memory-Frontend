@@ -11,14 +11,14 @@ const NavBar = () => {
         <div className="navbar">
    
          
-            <navbar>
+            {/* <navbar> */}
                 <button className="start">Start New Game</button>
                 <button className="login">Login</button>
                 <button className="logout">Logout</button>
                 <button className="about">About</button>
                 
 
-            </navbar>
+            {/* </navbar> */}
 
             
         </div>
