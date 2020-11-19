@@ -24,32 +24,22 @@ class App extends React.Component {
           cards: data
         }))
   }
+  
 
  
 
   render() {
+    let front = this.state.cards.map((card) => {
+      return <CardContainerFront key={card.id} card={card}  isFlipped={this.state.isFlipped} />
+      })
 
-    this.state.cards.map((card) => {
-      return <CardContainerFront key={card.id} card={card} isFlipped={this.state.isFlipped} />
-    })
-    this.state.cards.map((card) => {
-      return <CardContainerBack key={card.id} card={card} isFlipped={this.state.isFlipped} />
-    })
     return (
       <div className="App">
-
-
         <p>
           This is App.js
         </p>
-      <ReactCardFlip >
-        <CardContainerFront/>
-       
-     
-        
-        <CardContainerBack />
-      </ReactCardFlip>
-
+      
+      {front}
 
       </div>
 

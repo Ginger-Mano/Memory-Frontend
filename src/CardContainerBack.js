@@ -1,31 +1,43 @@
-import React, { useState, useEffect }from 'react';
-import ReactCardFlip from 'react-card-flip';
+import React, {Component}from 'react';
 
 
 
-const CardContainerBack = (props) => {
-    const  [isFlipped, setIsFlipped] = useState(true)
 
-    console.log(props, "Props")
+class CardContainerBack extends Component {
 
- const handleClick = (evt) => {
-        console.log(evt);
-    setIsFlipped(!isFlipped)
+    state = {
+        isFlipped: false
     }
+
+    handleClick = (e) => {
+        
+        console.log(e)
+        e.preventDefault();
+     
+        this.setState({
+            isFlipped: false
+        })
+        
+    }
+ 
+
+    // console.log(props, "Props")
+render () {
     return(
         <div className="cardgrid" >
-       {/* <ReactCardFlip> */}
-            <div isFlipped={props.isFlipped}onClick={handleClick} className="cardDiv">
+      
+        {this.state.isFlipped ? null :
+            <div onClick={this.handleClick} className="cardDiv">
             {/* <p>{props.card.term_name}</p> */}
-            <p>{props.definition}</p>
+            <p>{this.props.definition}</p>
             {/* <img className="backimg" src={props.card.image} alt="image"/> */}
-           <img src={props.image_front} alt="image front"/>
-           </div>
-           {/* </ReactCardFlip> */}
+           <img src={this.props.image_front} alt="image front"/>
+           </div>}
+    
           
         </div>
     )
-
+    }
     
 }
 
