@@ -4,14 +4,14 @@ import ReactCardFlip from 'react-card-flip';
 
 
 const CardContainer = (props) => {
-    const  [isFlipped, setIsFlipped] = useState(true)
+    const  [isFlipped, setIsFlipped] = useState(props)
 
     console.log(props, "Props")
 
  const handleClick = (evt) => {
         console.log(evt);
     setIsFlipped({
-        isFlipped: true
+        setIsFlipped: true
     })
     }
     return(
