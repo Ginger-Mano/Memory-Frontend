@@ -1,10 +1,13 @@
 import React from 'react';
 import AppWithHooks from './AppWithHooks'
+import NavBar from './Navbar'
 
 import './App.css';
 import CardContainerFront from './CardContainerFront';
 import ReactCardFlip from 'react-card-flip';
 import CardContainerBack from './CardContainerBack';
+import Dashboard from './Dashboard';
+
 
 class App extends React.Component {
 
@@ -35,11 +38,11 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <p>
-          This is App.js
-        </p>
+        <NavBar />
+       
       
       {front}
+      {/* <Dashboard /> */}
 
       </div>
 

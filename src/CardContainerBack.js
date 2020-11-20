@@ -24,6 +24,7 @@ class CardContainerBack extends Component {
     // console.log(props, "Props")
 render () {
     return(
+        
         <div className="cardgrid" >
       
         {this.state.isFlipped ? null :
