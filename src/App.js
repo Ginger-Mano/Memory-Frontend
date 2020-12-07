@@ -16,33 +16,55 @@ class App extends React.Component {
 
   state = {
     cards: [],
-    isFlipped: false
+    isFlipped: false,
+    users: []
   }
 
   componentDidMount() {
     fetch('http://localhost:3000/cards')
+
       .then(res => res.json())
       .then(data =>
         this.setState({
           cards: data
         }))
-  }
-  
+    fetch('http://localhost:3000/users')
 
- 
+      .then(res => res.json())
+      .then(data =>
+        this.setState({
+          users: data
+        })
+      )
+  }
+
+
+
+
+
+
+
 
   render() {
     let front = this.state.cards.map((card) => {
-      return <CardContainerFront key={card.id} card={card}  isFlipped={this.state.isFlipped} />
-      })
+      return <CardContainerFront key={card.id} card={card} randomID={this.randomID} isFlipped={this.state.isFlipped} />
+    }).Math.random()
+    let userInfo = this.state.users.map((user) => {
+      return <Dashboard key={user.id} user={user} />
+    })
 
     return (
       <div className="App">
         <NavBar />
-       
-      
-      {front}
-      {/* <Dashboard /> */}
+
+        <div className="most-outer-div">
+          <div className="second-div">
+            {front}
+          </div>
+          <div className="div-dash">
+            {userInfo}
+          </div>
+        </div>
 
       </div>
 
