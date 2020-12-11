@@ -48,7 +48,7 @@ class App extends React.Component {
   render() {
     let front = this.state.cards.map((card) => {
       return <CardContainerFront key={card.id} card={card} randomID={this.randomID} isFlipped={this.state.isFlipped} />
-    }).Math.random()
+    })
     let userInfo = this.state.users.map((user) => {
       return <Dashboard key={user.id} user={user} />
     })
