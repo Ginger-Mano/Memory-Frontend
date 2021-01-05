@@ -1,12 +1,13 @@
 import React from 'react';
 import AppWithHooks from './AppWithHooks'
 import NavBar from './Navbar'
-
+import {Route, Switch} from 'react-router-dom'
 import './App.css';
 import CardContainerFront from './CardContainerFront';
 import ReactCardFlip from 'react-card-flip';
 import CardContainerBack from './CardContainerBack';
 import Dashboard from './Dashboard';
+import About from './About';
 
 
 class App extends React.Component {
@@ -67,6 +68,9 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        {/* <Switch>
+        <Route path="/about" render={ () => <About/>}/>
+        </Switch> */}
         <NavBar />
 
         <div className="most-outer-div">
