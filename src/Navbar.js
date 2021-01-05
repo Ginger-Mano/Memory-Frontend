@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import { NavLink, Link } from "react-router-dom"
 
 
 
@@ -15,8 +15,9 @@ const NavBar = () => {
                 <button className="start">Start New Game</button>
                 <button className="login">Login</button>
                 <button className="logout">Logout</button>
-                <button className="about">About</button>
-                
+                <NavLink to="/about">
+                    <button className="about">About</button>
+                </NavLink>
 
             {/* </navbar> */}
 

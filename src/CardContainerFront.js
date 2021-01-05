@@ -8,28 +8,20 @@ class CardContainerFront extends Component {
         isFlipped: true
     }
 
-    handleClick = (e) => {
-
-        console.log(e)
-        e.preventDefault();
-        this.props.randomID(e)
-        this.setState(prevState => ({ isFlipped: !prevState.isFlipped }))
-
-    }
+  
 
     render() {
         console.log("hey", this.props);
 
         return (
             // <div className="cardgrid" >
-
             <React.Fragment>
                 {/* <div className="dashboard-div"> */}
                 {/* <Dashboard /> */}
                 <div className="outerDiv">
                     {/* </div> */}
 
-                    <div className="cardDiv" onClick={this.handleClick}>
+                    <div className="cardDiv">
 
                         <div className="flip-card">
                             <div className="flip-card-inner">

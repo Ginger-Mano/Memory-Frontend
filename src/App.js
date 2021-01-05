@@ -23,29 +23,41 @@ class App extends React.Component {
   componentDidMount() {
     fetch('http://localhost:3000/cards')
 
-      .then(res => res.json())
-      .then(data =>
-        this.setState({
-          cards: data
-        }))
-    fetch('http://localhost:3000/users')
-
+    .then(res => res.json())
+    .then(data =>
+      this.setState({
+        cards: this.suffer(data)
+        
+      }))
+      fetch('http://localhost:3000/users')
+      
       .then(res => res.json())
       .then(data =>
         this.setState({
           users: data
         })
-      )
-  }
-
-
-
+        )
+      }
+      
+      
+      
+      suffer = (cards) => {
+       for(let i = 0; i > cards.length; i++){
+         let randomIdx = Math.floor(Math.random() * cards.length)
+         let copyCurrent = {...cards[i]}
+         let copyRandom = {...cards[randomIdx]}
+         cards[i] = copyRandom
+         cards[randomIdx] = copyCurrent
+       }
+       return cards
+     }
 
 
 
 
 
   render() {
+    // let randomNum = this.state.cards.
     let front = this.state.cards.map((card) => {
       return <CardContainerFront key={card.id} card={card} randomID={this.randomID} isFlipped={this.state.isFlipped} />
     })
