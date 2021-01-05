@@ -17,6 +17,8 @@ const NavBar = () => {
             <button className="login">Login</button>
             <button className="logout">Logout</button>
             <NavLink to="/about">
+
+                {/* HERE WE ARE FROM YESTERDAY!!! */}
                 {/* <Switch>
                     <Route path="/about" render={() => <About />} />
                 </Switch> */}
