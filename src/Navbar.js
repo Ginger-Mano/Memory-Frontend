@@ -16,14 +16,13 @@ const NavBar = () => {
             <button className="start">Start New Game</button>
             <button className="login">Login</button>
             <button className="logout">Logout</button>
-            <NavLink to="/about">
+           
 
                 {/* HERE WE ARE FROM YESTERDAY!!! */}
-                {/* <Switch>
-                    <Route path="/about" render={() => <About />} />
-                </Switch> */}
-                <button className="about">About</button>
-            </NavLink>
+            
+                    <Link to="/about" className="about">About</Link>
+             
+            
 
             {/* </navbar> */}
 

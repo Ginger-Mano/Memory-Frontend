@@ -71,6 +71,7 @@ class App extends React.Component {
         {/* <Switch>
         <Route path="/about" render={ () => <About/>}/>
         </Switch> */}
+        <Route path="/">
         <NavBar />
 
         <div className="most-outer-div">
@@ -81,7 +82,7 @@ class App extends React.Component {
             {userInfo}
           </div>
         </div>
-
+        </Route>
       </div>
 
     );
