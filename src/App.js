@@ -25,9 +25,11 @@ class App extends React.Component {
 
       .then(res => res.json())
       .then(data =>
-        this.setState({
-          cards: data
-        }))
+        console.log(data)
+        // this.setState({
+        //   cards: data
+        // })
+      )
     fetch('http://localhost:3000/users')
 
       .then(res => res.json())
