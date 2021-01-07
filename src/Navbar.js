@@ -1,26 +1,32 @@
-import React, {useState} from 'react'
-
+import React, { useState } from 'react'
+import { NavLink, Link, Switch, Route } from "react-router-dom"
+import About from './About'
 
 
 
 const NavBar = () => {
-    
 
 
-    return(
+
+    return (
         <div className="navbar">
-   
-         
+
+
             {/* <navbar> */}
-                <button className="start">Start New Game</button>
-                <button className="login">Login</button>
-                <button className="logout">Logout</button>
-                <button className="about">About</button>
-                
+            <button className="start">Start New Game</button>
+            <button className="login">Login</button>
+            <button className="logout">Logout</button>
+
+
+            {/* HERE WE ARE FROM YESTERDAY!!! */}
+
+            <button className="about"> <Link to="/about" className="about">About</Link></button>
+
+
 
             {/* </navbar> */}
 
-            
+
         </div>
     )
 
