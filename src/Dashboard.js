@@ -7,7 +7,7 @@ class Dashboard extends Component {
 
 
     render() {
-        console.log("hi",this.props )
+        
 
         const {score, games_won, games_lost,username, image,time_spent } = this.props.user
         return (

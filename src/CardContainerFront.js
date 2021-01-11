@@ -11,7 +11,7 @@ class CardContainerFront extends Component {
   
 
     render() {
-        console.log("hey", this.props);
+    
 
         return (
             // <div className="cardgrid" >

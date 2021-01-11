@@ -4,6 +4,7 @@ import ReactCardFlip from 'react-card-flip';
 import CardContainerBack from './CardContainerBack';
 import Dashboard from './Dashboard';
 import About from './About';
+import NewGame from './NewGame'
 
 
 
@@ -59,6 +60,7 @@ class Home extends React.Component {
         return (
             <div>
                 <h1>Home</h1>
+                <NewGame handleClick={this.props.handleClick}onChange={this.props.handleChange}/>
 
                 <div className="most-outer-div">
                     <div className="second-div">

@@ -4,21 +4,22 @@ import About from './About'
 
 
 
-const NavBar = () => {
+class NavBar extends React.Component {
+  
 
-
+render(){
 
     return (
         <div className="navbar">
 
 
             {/* <navbar> */}
-            <button className="start">Start New Game</button>
+            <button onClick={this.props.handleClick}className="start">Start New Game</button>
             <button className="login">Login</button>
             <button className="logout">Logout</button>
 
 
-            {/* HERE WE ARE FROM YESTERDAY!!! */}
+            
 
             <button className="about"> <Link to="/about" className="about">About</Link></button>
 
@@ -30,6 +31,7 @@ const NavBar = () => {
         </div>
     )
 
+}
 }
 
 export default NavBar
