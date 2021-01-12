@@ -2,6 +2,7 @@ import React from 'react'
 
 
 const NewGame = (props) => {
+    console.log(props, "in new game")
     return(
         <>
         <h1>New Game</h1>

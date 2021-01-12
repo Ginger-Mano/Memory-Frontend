@@ -63,19 +63,18 @@ class App extends React.Component {
 
 handleClick = (evt) => {
   console.log(evt,"here we are")
-    this.setState({
-        [evt.target.name]: evt.target.value
-    })
+    
 }
 handleChange = (evt) => {
-  console.log("handle change",evt)
+  console.log(evt.target.value,'in handle change')
   this.setState({
     [evt.target.name]: evt.target.value
 
   })
 }
 handleSubmit = (evt) => {
-console.log('The user is: ', evt.target.name.value)
+  // We are here!
+
 }
 
 
@@ -100,7 +99,7 @@ console.log('The user is: ', evt.target.name.value)
 
         <NavBar handleClick={this.handleClick}/>
         <Switch>
-          <Route exact path="/" render={() => <Home handleClick={this.handleClick} onChange={this.handleChange}/>}></Route>
+          <Route exact path="/" render={() => <Home handleClick={this.handleClick} handleChange={this.handleChange} />}></Route>
           <Route path="/about" render={() => <About />}></Route>
 
 
