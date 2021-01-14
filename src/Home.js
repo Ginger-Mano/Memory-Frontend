@@ -51,7 +51,7 @@ class Home extends React.Component {
 
     render() {
 
-        console.log('in home', this.props)
+      
         let front = this.state.cards.map((card) => {
             return <CardContainerFront key={card.id} card={card} randomID={this.randomID} isFlipped={this.state.isFlipped} />
         })

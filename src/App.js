@@ -73,7 +73,27 @@ handleChange = (evt) => {
   })
 }
 handleSubmit = (evt) => {
-  // We are here!
+  // We are here!!! IT's monday
+evt.preventDefault()
+
+let userObj = {
+ user: {
+   name: this.state.name,
+   username: this.state.username
+ }
+}
+fetch('http://localhost3000/users', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(userObj) 
+
+})
+.then(res => res.json())
+.then(newUserObject => {
+ console.log(newUserObject,"new user obj")
+})
 
 }
 
