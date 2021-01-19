@@ -75,7 +75,7 @@ handleChange = (evt) => {
 handleSubmit = (evt) => {
   // We are here!!! IT's monday
 evt.preventDefault()
-
+console.log(evt, "Hit SUbmit")
 let userObj = {
  user: {
    name: this.state.name,
@@ -119,7 +119,7 @@ fetch('http://localhost3000/users', {
 
         <NavBar handleClick={this.handleClick}/>
         <Switch>
-          <Route exact path="/" render={() => <Home handleClick={this.handleClick} handleChange={this.handleChange} />}></Route>
+          <Route exact path="/" render={() => <Home handleSubmit={this.handleSubmit} handleClick={this.handleClick} handleChange={this.handleChange} />}></Route>
           <Route path="/about" render={() => <About />}></Route>
 
 

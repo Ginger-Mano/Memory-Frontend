@@ -62,7 +62,7 @@ class Home extends React.Component {
         return (
             <div>
                 <h1>Home</h1>
-                <NewGame handleClick={this.props.handleClick} handleChange={this.props.handleChange} />
+                <NewGame handleClick={this.props.handleClick} handleChange={this.props.handleChange} handleSubmit={this.props.handleSubmit}/>
 
                 <div className="most-outer-div">
                     <div className="second-div">

@@ -7,11 +7,11 @@ const NewGame = (props) => {
         <>
         <h1>New Game</h1>
         <div>
-        <form>
+        <form >
             <label for="name"></label>
 
             <input onChange={props.handleChange} type="text" placeholder="Your Name...." value={props.name} name="name"></input>
-            <input type="submit" value="Submit"></input>
+            <input type="submit" value="Submit" onSubmit={props.handleSubmit}></input>
         </form>
         </div>
         </>
