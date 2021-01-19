@@ -73,14 +73,14 @@ handleChange = (evt) => {
   })
 }
 handleSubmit = (evt) => {
-  // We are here!!! IT's monday
+  
 evt.preventDefault()
 console.log(evt, "Hit SUbmit")
 let userObj = {
- user: {
+  user: {
    name: this.state.name,
    username: this.state.username
- }
+  }
 }
 fetch('http://localhost3000/users', {
   method: 'POST',
@@ -96,10 +96,8 @@ fetch('http://localhost3000/users', {
 })
 
 }
-
-
-
-
+// TUESDAY!
+// We are here making sure the fetch matches backend (promise failed)
 
 
   render() {
